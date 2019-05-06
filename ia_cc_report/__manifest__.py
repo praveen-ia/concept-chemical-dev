@@ -5,7 +5,7 @@
 ###############################################################################
 {
     "name" : "Australian CC Reports (CE)",
-    "version" : "1.7",
+    "version" : "1.8",
     "author" : "Ioppolo and Associates",
     "website" : "http://www.ioppolo.com.au",
     "category" : "Sales",
@@ -16,8 +16,6 @@
          Change layout for invoice report,
          Change layout for Stock Delivery report,
          Change Layout for Purchase Order and Request for Quotation report,
-         
-         
     """,
     "depends" : [
         'delivery',
@@ -29,7 +27,7 @@
     "data" : [
         'data/mail_template_data.xml',
         'data/mail_template_data_confirm.xml',
-        'views/res_company_view.xml',
+#         'views/res_company_view.xml',
         'views/stock_picking_view.xml',
         'report/invoice_report_view.xml',
         'report/invoice_commercial_report_view.xml',
