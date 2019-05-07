@@ -95,9 +95,15 @@
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>Pack Size(KG)</strong>
                             </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
+                                <strong>Pack Size(KG)</strong>
+                            </t>
                         </th>
                         <th>
                              <t t-if="o.state in ['purchase', 'done']">
+                                <strong>INCI Name</strong>
+                            </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
                                 <strong>INCI Name</strong>
                             </t>
                         </th>
@@ -105,14 +111,23 @@
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>Batch Number</strong>
                             </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
+                                <strong>Batch Number</strong>
+                            </t>
                         </th>
                         <th>
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>Unit Quantity</strong>
                             </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
+                                <strong>Unit Quantity</strong>
+                            </t>
                         </th>
                         <th>
                              <t t-if="o.state in ['purchase', 'done']">
+                                <strong>UOM</strong>
+                            </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
                                 <strong>UOM</strong>
                             </t>
                         </th>
@@ -126,6 +141,9 @@
 <!--                        </th>-->
                         <th>
                              <t t-if="o.state in ['purchase', 'done']">
+                                <strong>Weight For Shipping</strong>
+                            </t>
+                            <t t-if="o.state not in ['purchase', 'done']">
                                 <strong>Weight For Shipping</strong>
                             </t>
                         </th>
