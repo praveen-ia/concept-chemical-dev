@@ -5,7 +5,7 @@
 ###############################################################################
 {
     "name" : "Australian CC Reports (CE)",
-    "version" : "1.8",
+    "version" : "1.9",
     "author" : "Ioppolo and Associates",
     "website" : "http://www.ioppolo.com.au",
     "category" : "Sales",
