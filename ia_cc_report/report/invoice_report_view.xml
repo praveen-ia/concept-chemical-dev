@@ -51,12 +51,17 @@
                    <td width="50%">
                        <t t-if="o.type == 'in_invoice'"><strong>Vendor:</strong></t>
                        <t t-if="o.type == 'out_invoice'"><strong>Customer:</strong></t>
-                       <div t-field="o.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+<!--                       <div t-field="o.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' /-->
+                   	   <div t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                   	   <div class="mt16 text-left" t-if="o.partner_id.vat">
+                   			<t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: 
+                   			<span t-field="o.partner_id.vat"/>
+                   		</div>
                    </td>
                    <td width="50%" align="right">
                        <div class="text-left"><strong>Shipping address:</strong></div>
-                       <div class="text-left" t-field="o.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
-                       <div class="mt16 text-left" t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.partner_id.vat"/></div>
+                       <div class="text-left" t-field="o.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                       <div class="mt16 text-left" t-if="o.partner_shipping_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.partner_id.vat"/></div>
                    </td>
                </tr>
            </table>
