@@ -49,7 +49,8 @@
            <table width="100%">
                <tr>
                    <td width="50%">
-                       <strong>Customer:</strong>
+                       <t t-if="o.type == 'in_invoice'"><strong>Vendor:</strong></t>
+                       <t t-if="o.type == 'out_invoice'"><strong>Customer:</strong></t>
                        <div t-field="o.partner_shipping_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
                    </td>
                    <td width="50%" align="right">
