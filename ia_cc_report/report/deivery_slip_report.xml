@@ -41,16 +41,16 @@
                                     <span t-field="o.custom_partner_ref"/>
                                 </td>
                                 <td>
-                                    <span t-field="o.scheduled_date"/>
+                                    <span t-field="o.scheduled_date" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
                                 </td>
                                  <td>
-                                    <span t-field="o.scheduled_date"/>
+                                    <span t-field="o.scheduled_date" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
                                 </td>
                                 <td name="td_sched_date">
-                                    <span t-field="o.date_done"/>
+                                    <span t-field="o.date_done" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
                                 </td>
                                 <td name="td_sched_date">
-                                    <span t-field="o.scheduled_date"/>
+                                    <span t-field="o.scheduled_date" t-options="{&quot;format&quot;: &quot;dd/MM/yyyy&quot;}"/>
                                 </td>
                                 <td>
                                     <span t-field="o.custom_incoterm_id"/>
@@ -105,7 +105,7 @@
                             <tr>
                                 <th><strong>Product Name</strong></th>
                                 <th><strong>Pack Size</strong></th>
-                                <th><strong>INCI Name</strong></th>
+                               <!-- <th><strong>INCI Name</strong></th>-->
                                 <th><strong>Batch Number</strong></th>
                                 <th class="text-center"><strong>Unit Quantity</strong></th>
                                 <th class="text-center"><strong>UOM</strong></th>
@@ -128,9 +128,9 @@
                                 <td>
 <!--                                	<span t-field="move.package_id.weight"/-->
                                 </td>
-                                <td>
+                               <!-- <td> 
                                 	<span t-field="move.product_id.x_studio_field_xYGHQ"/>
-                                </td>
+                                </td>-->
                                 <td class="text-left">
 							    </td>
                                 <td>
@@ -154,7 +154,7 @@
                             <tr>
                                 <th><strong>Product Name</strong></th>
                                 <th><strong>Pack Size</strong></th>
-                                <th><strong>INCI Name</strong></th>
+                                <!--<th><strong>INCI Name</strong></th> -->
                                 <th><strong>Batch Number</strong></th>
                               <!--  <th name="lot_serial" t-if="has_serial_number" groups="stock.group_lot_on_delivery_slip">
                                     Lot #
@@ -179,9 +179,9 @@
                                 <td>
                                 	<span t-field="move_line.package_id.weight"/>
                                 </td>
-                                <td>
+                               <!-- <td> 
                                 	<span t-field="move_line.product_id.x_studio_field_xYGHQ"/>
-                                </td>
+                                </td>-->
                                 <td class="text-left">
 							    </td>
                                <!-- <td  t-if="has_serial_number">
