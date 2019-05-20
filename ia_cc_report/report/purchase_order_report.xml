@@ -19,7 +19,7 @@
                             <strong>Supplier Address:</strong>
                             <div t-field="o.partner_id"
                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
-                            <p t-if="o.partner_id.vat"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>: <span t-field="o.partner_id.vat"/></p>
+                            <p t-if="o.partner_id.vat"> <t t-if="o.partner_id.country_id.name != 'United States'"><t t-esc="o.company_id.country_id.vat_label or 'Tax ID'"/>:</t> <span t-field="o.partner_id.vat"/></p>
                         </t>
                     </t>
                 </t>
@@ -99,14 +99,14 @@
                                 <strong>Pack Size(KG)</strong>
                             </t>
                         </th>
-                        <th>
+                       <!-- <th> 
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>INCI Name</strong>
                             </t>
                             <t t-if="o.state not in ['purchase', 'done']">
                                 <strong>INCI Name</strong>
                             </t>
-                        </th>
+                        </th>-->
                         <th>
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>Batch Number</strong>
@@ -139,7 +139,7 @@
 <!--                                <strong>Date Required</strong>-->
 <!--                            </t>-->
 <!--                        </th>-->
-                        <th>
+                        <th class="text-center">
                              <t t-if="o.state in ['purchase', 'done']">
                                 <strong>Weight For Shipping</strong>
                             </t>
@@ -181,14 +181,14 @@
                             </t>
                         </td>
                         <td></td>
-                        <td>
+                       <!-- <td>
                         	<t t-if="o.state in ['purchase', 'done']">
                                 <span t-field="line.product_id.x_studio_field_xYGHQ"/><span t-field="line.product_id.x_studio_field_xYGHQ"/>
                             </t>
                             <t t-if="o.state not in ['purchase', 'done']">
-                                <span t-field="line.product_id.x_studio_field_xYGHQ"/>
+                                <span t-field="line.product_id.x_studio_field_xYGHQ"/>  
                             </t>
-                        </td>
+                        </td>-->
                         <td></td>
                         <td class="text-right">
                             <span t-field="line.product_qty"/>
@@ -204,7 +204,7 @@
                                 <span t-field="line.date_planned" t-options='{"format": "d MMMM y"}'/>
                             </t>
                         </td>-->
-                         <td>
+                         <td class="text-center">
                         	<span t-field="line.product_id.weight"/>
                         </td>
                         <!--<td>

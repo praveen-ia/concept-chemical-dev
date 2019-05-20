@@ -56,7 +56,7 @@
 	                    <tr>
 	                        <th><strong>Product Name</strong></th>
 	                        <th><strong>Pack Size</strong></th>
-	                        <th><strong>INCI Name</strong></th>
+<!--	                        <th><strong>INCI Name</strong></th-->
 	                        <th><strong>Batch Number</strong></th>
 <!--	                        <th class="text-center"><strong>Expected Date</strong></th-->
 	                        <th class="text-right"><strong>Unit Quantity</strong></th>
@@ -71,9 +71,9 @@
 	                        </td>
 	                        <td>
 	                        </td>
-	                        <td>
+	                       <!-- <td> 
 								<span t-field="order_line.product_id.x_studio_field_xYGHQ"/>	                        	
-	                        </td>
+	                        </td>-->
 	                        <td>
 	                        </td>
 	                        <!--<td class="text-center">
